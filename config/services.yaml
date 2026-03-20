@@ -1,0 +1,54 @@
+# Cloud Service Status Monitor Configuration
+# ============================================
+# Phase 1: All USA-region incidents are shown (service_filter is empty = show all)
+# Phase 2: Populate service_filter lists with services your org uses to reduce noise
+
+polling_interval_seconds: 60
+
+azure:
+  enabled: true
+  # Leave empty to monitor ALL Azure services in USA regions
+  # Populate with service names from https://status.azure.com to filter to org services
+  service_filter: []
+  # Examples:
+  # service_filter:
+  #   - "Azure Storage"
+  #   - "Azure Virtual Machines"
+  #   - "Azure Kubernetes Service"
+  #   - "Azure Active Directory"
+  #   - "Azure SQL Database"
+
+gcp:
+  enabled: true
+  # Leave empty to monitor ALL GCP services in USA regions
+  # Populate with product names from https://status.cloud.google.com
+  service_filter: []
+  # Examples:
+  # service_filter:
+  #   - "Cloud Run"
+  #   - "Cloud SQL"
+  #   - "Google Kubernetes Engine"
+  #   - "Cloud Storage"
+  #   - "Vertex AI"
+
+oci:
+  enabled: true
+  # Leave empty to monitor ALL OCI services in USA regions
+  service_filter: []
+  # Examples:
+  # service_filter:
+  #   - "Object Storage"
+  #   - "Compute"
+  #   - "Kubernetes Engine (OKE)"
+  #   - "Autonomous Database"
+
+cloudflare:
+  enabled: true
+  # Leave empty to monitor ALL Cloudflare services in USA
+  service_filter: []
+  # Examples:
+  # service_filter:
+  #   - "CDN/Cache"
+  #   - "DNS"
+  #   - "Workers"
+  #   - "Access"

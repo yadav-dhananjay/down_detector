@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m venv .venv)",
+      "Bash(.venv/Scripts/pip install:*)",
+      "Bash(.venv/Scripts/python -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(.venv/Scripts/pytest tests/ -v)",
+      "Bash(.venv/Scripts/python -c \":*)",
+      "Bash(.venv/Scripts/pytest tests/ -q)",
+      "Bash(.venv/Scripts/python -c \"import download_detector; print\\(''OK''\\)\")",
+      "WebFetch(domain:azure.status.microsoft)"
+    ]
+  }
+}

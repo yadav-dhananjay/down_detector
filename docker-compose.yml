@@ -1,0 +1,24 @@
+services:
+  # Terminal dashboard mode (default)
+  monitor:
+    build: .
+    environment:
+      DD_UI: terminal
+      DD_POLLING_INTERVAL_SECONDS: "60"
+    volumes:
+      - ./config:/app/config:ro   # Mount local config for easy edits without rebuilding
+    restart: unless-stopped
+    tty: true        # Required for Rich terminal rendering
+    stdin_open: true
+
+  # Web UI mode (uncomment to use instead of terminal mode)
+  # monitor-web:
+  #   build: .
+  #   environment:
+  #     DD_UI: web
+  #     DD_POLLING_INTERVAL_SECONDS: "60"
+  #   volumes:
+  #     - ./config:/app/config:ro
+  #   ports:
+  #     - "5000:5000"
+  #   restart: unless-stopped

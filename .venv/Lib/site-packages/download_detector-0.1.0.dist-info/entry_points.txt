@@ -1,0 +1,2 @@
+[console_scripts]
+download-detector = download_detector.main:main
