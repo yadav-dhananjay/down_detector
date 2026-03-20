@@ -1,0 +1,2 @@
+[console_scripts]
+down-detector = down_detector.main:main

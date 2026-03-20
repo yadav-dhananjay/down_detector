@@ -1,6 +1,6 @@
 import pytest
-from download_detector.config import ProviderConfig
-from download_detector.store import StatusStore
+from down_detector.config import ProviderConfig
+from down_detector.store import StatusStore
 
 
 @pytest.fixture

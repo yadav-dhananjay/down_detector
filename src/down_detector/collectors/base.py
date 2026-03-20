@@ -10,7 +10,7 @@ from ..config import ProviderConfig
 logger = logging.getLogger(__name__)
 
 DEFAULT_HEADERS = {
-    "User-Agent": "download-detector/0.1 (cloud-status-monitor; https://github.com/your-org/download-detector)",
+    "User-Agent": "down-detector/0.1 (cloud-status-monitor; https://github.com/your-org/down-detector)",
     "Accept": "application/json",
 }
 

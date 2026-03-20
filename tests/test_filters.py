@@ -1,4 +1,4 @@
-from download_detector.filters.region import (
+from down_detector.filters.region import (
     filter_azure_usa_regions,
     filter_gcp_usa_regions,
     filter_oci_usa_regions,

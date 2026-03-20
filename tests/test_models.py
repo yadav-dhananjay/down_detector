@@ -1,5 +1,5 @@
 from datetime import datetime
-from download_detector.models import StatusEvent, Provider, Severity
+from down_detector.models import StatusEvent, Provider, Severity
 
 
 def make_event(**kwargs):
